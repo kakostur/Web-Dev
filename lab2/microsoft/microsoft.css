@@ -1,0 +1,188 @@
+*{
+    flex-wrap: wrap;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+.left-menu, .right-menu {
+    display: flex;
+    align-items: center;
+}
+p, a{
+    margin: 5px 15px 0px 15px;
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #515151;
+    font-size: 11.5px;
+
+}
+ul {
+    list-style-type: none;	
+    padding: 0;
+}
+#logo {
+    height: 23px;
+}
+.container {
+    width: 1280px;
+    margin: auto;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+header ul {
+    margin: 0px 0px 10px 0px;
+}
+header ul li {
+    padding: 5px 0px;
+    font-size: 13px;
+}
+header ul li a {
+    display: block;
+}
+.down-arrow{
+    height: 20px;
+}
+.right-menu li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-visual {
+    width: 1420px;
+    height: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-AI-11Ed-Sapphire-MC001-3000x1682:VP5-1920x600);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-visual .content {
+    width: 430px;
+    margin: 120px;
+    padding: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+#main-content-big-text{
+    font-weight: 600;
+    font-size: 34px;
+    color: #2d2d2d;
+}
+.main-visual p {
+    margin-bottom: 32px;
+    color: #484747;
+}
+.content button{
+    background-color: #3557dc;
+    color: #fff;;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin-left: 15px;
+    border: none;
+    height: 40px;
+}
+.content button:hover{
+    text-decoration: none;
+    background-color: #2045a3;
+}
+.cards {
+    margin: 70px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-top: 10%;
+}
+.card {
+    width: 300px;
+    border: solid 2px rgba(216, 216, 216, 0.538);
+    display: flex;
+    flex-direction: row;
+
+}
+.card button{
+    background-color: #184ed7;
+    color: #fff;;
+    padding: 1%;
+    border: none;
+    cursor: pointer;
+    margin: 5%;
+}
+.card button:hover{
+    text-decoration: none;
+    background-color: #2045a3;
+}
+.card button a{
+    font-size: 15px;
+}
+.card-img {
+    width: 100%;
+}
+.cards-content-big-text{
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.card-content-text {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 28px; 
+    text-align: center;
+    padding: 10px;
+}
+
+.box-of-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+}
+.card a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffffff;
+    margin: 10px 0px;
+}
+.right-arrow{
+    height: 15px;
+    margin: 0px 15px 0px 5px;
+}
+.nav{
+    margin: 30px 0 30px 45%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    gap: 20px;
+
+}
+.na{
+    margin: 30px 10% 30px 10%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    gap: 20px;
+    padding: 30px;    
+    font-size: 30px;
+}
+.info a{
+    font-size: 20px;
+    color: rgb(16, 99, 176);
+    text-decoration: underline;
+}
