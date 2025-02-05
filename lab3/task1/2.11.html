@@ -1,0 +1,150 @@
+<!-- 2.11.1 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( null || 2 || undefined );
+        //2
+    </script>
+</body>
+</html>
+
+<!-- 2.11.2 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( alert(1) || 2 || alert(3) );
+        // first appears alert(1)
+        // then alert shows 2 // it show first true value - 2
+        // it doesn/t reach till alert(3)
+    </script>
+</body>
+</html>
+
+<!-- 2.11.3 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( 1 && null && 2 );
+        //null
+    </script>
+</body>
+</html>
+
+<!-- 2.11.4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( alert(1) && alert(2) );
+        // first it shows 1
+        // then it shows "underfined", because it's first false value
+    </script>
+</body>
+</html>
+
+<!-- 2.11.5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( null || 2 && 3 || 4 );
+        //answer:3
+    </script>
+</body>
+</html>
+
+<!-- 2.11.6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (!(age >= 14 && age <= 90));
+        if (age < 14 || age > 90);
+    </script>
+</body>
+</html>
+
+
+<!-- 2.11.7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (-1 || 0) alert( 'first' );
+        // -1 OR 0 is true. So, alert will execute
+        if (-1 && 0) alert( 'second' );
+        // -1 is true, 0 is false. Result of AND operation is false. So, alert won't execute
+        if (null || -1 && 1) alert( 'third' );
+        // this OR operation returnes true. So, alert will execute
+    </script>
+</body>
+</html>
+
+
+<!-- 2.11.8 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userName = prompt("Who's there?", "")
+        if(userName === "Admin"){
+            let password = prompt("Password?",  "")
+            if(password === "TheMaster"){
+                alert("Welcome")
+            } else if (password === "" || password == null){
+                alert("Canceled")
+            } else {
+                alert("Wrong password")
+            }
+        } else if(userName === "" || userName == null){
+            alert("Canceled")
+        } else {
+            alert("I don't know you")
+        }
+        
+    </script>
+</body>
+</html>
