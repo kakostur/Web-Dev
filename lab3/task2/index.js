@@ -4,6 +4,9 @@ let addButton = document.querySelector("button")
 let itemArrayList = []
 
 function addNewItem(thisInputValue){
+    if(thisInputValue.trim()===""){
+        return
+    }
     let newItemElement = `<div class = "task-item">
     <div class="item">       
         <p class = "title"> <input type="checkbox" class="checkbox" /> ${thisInputValue} </p>
