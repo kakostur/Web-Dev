@@ -17,7 +17,7 @@
     align-items: center;
     gap: 1rem;
     position: absolute;
-    left: 30px; /* Разместим логотип слева */
+    left: 30px;
 }
 
 .logo img {
@@ -35,7 +35,7 @@
 #nav {
     display: flex;
     gap: 20px;
-    margin: 0 auto; /* Центрируем */
+    margin: 0 auto;
 }
 
 #nav a {
