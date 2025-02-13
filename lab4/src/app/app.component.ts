@@ -4,8 +4,8 @@ import { ProductsComponent } from './products/products.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // Делаем standalone
-  imports: [HeaderComponent, ProductsComponent], // Импортируем компоненты
+  standalone: true, 
+  imports: [HeaderComponent, ProductsComponent], 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
