@@ -89,8 +89,8 @@ body {
   }
   
   .product-actions button {
-    font-size: 14px;  /* уменьшили шрифт кнопок */
-    padding: 8px 15px;  /* уменьшили отступы кнопок */
+    font-size: 14px; 
+    padding: 8px 15px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
