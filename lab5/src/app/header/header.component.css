@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    left: 30px; 
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d72130;
+}
+
+#nav {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto; 
+}
+
+#nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(48, 47, 47);
+    transition: color 0.3s ease-in-out;
+}
+
+#nav a:hover {
+    color: #d72130;
+}
