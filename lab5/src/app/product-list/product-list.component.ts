@@ -1,6 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductItemComponent } from '../product-item/product-item.component';
+
+interface Category {
+  name: string;
+  products: Product[];
+}
 
 interface Product {
   image: string;
@@ -14,10 +18,20 @@ interface Product {
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ProductItemComponent],
+  imports: [CommonModule],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  @Input() products: Product[] = [];
+  categories: Category[] = [
+    { name: 'Electronics', products: [] },
+    { name: 'Clothing', products: [] },
+    { name: 'Books', products: [] }
+  ];
+  
+  selectedCategory: Category | null = null;
+
+  selectCategory(category: Category) {
+    this.selectedCategory = category;
+  }
 }
