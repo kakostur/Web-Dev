@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component'; 
+import { HeaderComponent } from './header/header.component';
+import { ProductListComponent } from './product-list/product-list.component'; 
 
 interface Product {
   image: string;
@@ -19,11 +20,13 @@ interface Category {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, ProductListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+  selectedcategory: string = ''; 
   categories: Category[] = [
     {
       name: 'ТЕЛЕФОНЫ И ГАДЖЕТЫ',
@@ -211,6 +214,11 @@ export class AppComponent {
 
   selectCategory(category: Category) {
     this.selectedCategory = category;
+  }
+  removeProduct(index: number) {
+    if (this.selectedCategory) {
+      this.selectedCategory.products.splice(index, 1);
+    }
   }
 
   likeProduct(product: Product) {
