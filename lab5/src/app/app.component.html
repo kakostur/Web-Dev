@@ -1,29 +1,36 @@
 <app-header></app-header>
+<app-product-list></app-product-list>
+
 <div class="app-container">
   <div class="content">
     <div class="category-list">
-      <div *ngFor="let category of categories" class="category-item" (click)="selectCategory(category)">
+      <div 
+        *ngFor="let category of categories" 
+        class="category-item" 
+        [ngClass]="{'active': category === selectedCategory}" 
+        (click)="selectCategory(category)">
         <h3>{{ category.name }}</h3>
       </div>
     </div>
 
     <div *ngIf="selectedCategory" class="product-list">
-      <div *ngFor="let product of selectedCategory.products" class="product-item">
+      <div *ngFor="let product of selectedCategory.products; let i = index" class="product-item">
         <img src="{{ product.image }}" alt="{{ product.name }}">
         <h4>{{ product.name }}</h4>
+        <p class="rating">⭐ {{ product.rating }}/5</p> 
         <p>{{ product.description }}</p>
         <div class="product-actions">
           <button class="like" (click)="likeProduct(product)">
-            <i class="fas fa-thumbs-up"></i> Like ({{ product.likes }})
+            <i class="fas fa-thumbs-up"></i>  ({{ product.likes }})
           </button>
           <button class="whatsapp" (click)="shareProduct(product, 'whatsapp')">
-            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+            <i class="fab fa-whatsapp"></i> 
           </button>
           <button class="telegram" (click)="shareProduct(product, 'telegram')">
-            <i class="fab fa-telegram-plane"></i> Share on Telegram
+            <i class="fab fa-telegram-plane"></i> 
           </button>
-          <button class="buy" (click)="openLink(product.link)">
-            <i class="fas fa-shopping-cart"></i> Buy
+          <button class="remove" (click)="removeProduct(i)">
+            <i class="fas fa-trash"></i> 
           </button>
         </div>
       </div>
