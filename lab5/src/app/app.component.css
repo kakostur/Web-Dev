@@ -36,6 +36,11 @@ body {
     overflow: hidden;
     cursor: pointer;
   }
+  .category-item.active {
+    background-color: #ff5959;
+    color: white;
+    font-weight: bold;
+  }
   
   .category-item h3 {
     margin: 10px;
@@ -43,6 +48,7 @@ body {
     color: #333;
     padding: 7px;
   }
+
   
   .product-list {
     display: flex;
@@ -86,14 +92,19 @@ body {
     align-items: center;
     padding: 10px;
     border-top: 1px solid #f0f0f0;
+    gap: 5px;
   }
   
   .product-actions button {
     font-size: 14px; 
-    padding: 8px 15px; 
+    padding: 6px 12px;    
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+
   }
   
   .product-actions .like {
@@ -118,5 +129,39 @@ body {
   
   .product-actions button:hover {
     opacity: 0.8;
+  }
+  .categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .category {
+    padding: 10px 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .category:hover {
+    background: lightgray;
+  }
+  
+  .category.active {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  .remove {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .remove:hover {
+    background: darkred;
   }
   
