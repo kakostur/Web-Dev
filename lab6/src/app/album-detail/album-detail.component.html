@@ -1,0 +1,14 @@
+<h2>Album Details</h2>
+
+<div *ngIf="album" class="album-detail-container">
+  <label class="album-title-label">
+    Title:
+    <input [(ngModel)]="album.title" class="album-title-input">
+  </label>
+
+  <div class="album-buttons">
+    <button class="album-btn save" (click)="saveAlbum()">Save</button>
+    <button class="album-btn back" (click)="goBack()">Back</button>
+    <a class="album-btn photos" [routerLink]="['/albums', album.id, 'photos']">Photos</a>
+  </div>
+</div>
