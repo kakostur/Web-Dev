@@ -1,5 +1,9 @@
 <h2>Album List</h2>
 
+<div class="update">
+  <input type="text" [(ngModel)]="newAlbumTitle" placeholder="Enter album title">
+  <button (click)="createAlbum()">Create</button>
+</div>
 
 <div *ngIf="albums.length; else noAlbums" class="albums-container">
   <div *ngFor="let album of albums" class="album-item">
