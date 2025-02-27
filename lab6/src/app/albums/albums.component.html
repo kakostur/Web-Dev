@@ -1,0 +1,27 @@
+<h2>Album List</h2>
+
+
+<div *ngIf="albums.length; else noAlbums" class="albums-container">
+  <div *ngFor="let album of albums" class="album-item">
+    <h3>{{ album.title }}</h3>
+
+    <div *ngIf="photos[album.id]?.length; else loading">
+      <div *ngFor="let photo of photos[album.id]" class="photo-container">
+        <img [src]="photo.url" [alt]="photo.title" width="150">
+      </div>
+    </div>
+
+    <ng-template #loading>
+      <p>Uploading photos...</p>
+    </ng-template>
+
+    <div class="album-buttons">
+      <a [routerLink]="['/albums', album.id]">View Details</a>
+      <button (click)="deleteAlbum(album.id)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #noAlbums>
+  <p>There are no albums</p>
+</ng-template>
