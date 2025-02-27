@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AlbumsService } from '../albums.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-albums',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.scss']
 })
@@ -90,15 +91,15 @@ export class AlbumsComponent implements OnInit {
 
   createAlbum(): void {
     if (!this.newAlbumTitle.trim()) {
-      return; // Не создаём пустой альбом
+      return; 
     }
   
     const newAlbum = { title: this.newAlbumTitle };
   
     this.albumsService.createAlbum(newAlbum).subscribe(createdAlbum => {
       console.log('Album created:', createdAlbum);
-      this.albums = [createdAlbum, ...this.albums]; // Добавляем в начало списка
-      this.newAlbumTitle = ''; // Очищаем поле ввода
+      this.albums = [createdAlbum, ...this.albums]; 
+      this.newAlbumTitle = ''; 
     });
   }
 }
