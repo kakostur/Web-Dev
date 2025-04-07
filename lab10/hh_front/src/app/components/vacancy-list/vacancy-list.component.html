@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngIf="company">
+      <h2>{{ company.name }} - Vacancies</h2>
+      <p>{{ company.description }}</p>
+      <p><strong>Address:</strong> {{ company.city }}, {{ company.address }}</p>
+    </div>
+    
+    <div class="vacancy-list">
+      <div *ngFor="let vacancy of vacancies" class="vacancy-card">
+        <h3>{{ vacancy.name }}</h3>
+        <p>Salary: {{ vacancy.salary }} ₸</p>
+        <p>{{ vacancy.description }}</p>
+      </div>
+    </div>
+    
+    <div *ngIf="vacancies.length === 0" class="no-vacancies">
+      <p>No vacancies available for this company.</p>
+    </div>
+    
+    <button routerLink="/" class="back-button">Back to Companies</button>
+  </div>

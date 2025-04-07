@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Companies</h2>
+    
+    <div class="company-list">
+      <div *ngFor="let company of companies" class="company-card" (click)="viewCompanyDetails(company.id)">
+        <h3>{{ company.name }}</h3>
+        <p><strong>City:</strong> {{ company.city }}</p>
+        <p>{{ company.description }}</p>
+      </div>
+    </div>
+  </div>
